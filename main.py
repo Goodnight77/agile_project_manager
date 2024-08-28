@@ -15,7 +15,6 @@ class AgileProjectManager:
         retries = 3
         for attempt in range(retries):
             try:
-                # Run the chains in sequence
                 tasks = self.task_parser.run(project_description)
                 user_stories = self.user_story_extractor.run(project_description)
                 prioritized_backlog = self.backlog_prioritizer.run(project_description)
@@ -37,29 +36,22 @@ class AgileProjectManager:
 def main():
     st.title("Agile Project Manager with LLM")
 
-    # Input field for project description
     project_description = st.text_area("Enter Project Description", height=200)
 
-    # Create the LLM client
-    client = ChatGroqClient(api_key="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")
+    client = ChatGroqClient(api_key="api_key_here")
     client.create_client()
     llm = client.get_llm()
 
-    # Process the project when the button is clicked
     if st.button("Generate Agile Artifacts"):
         if project_description.strip() == "":
             st.error("Please enter a project description.")
         else:
-            # Initialize AgileProjectManager with the LLM
             project_manager = AgileProjectManager(llm)
             
             retries = 3
             for attempt in range(retries):
                 try:
-                    # Process the project description
                     result = project_manager.process_project(project_description)
-
-                    # Display the results
                     st.subheader("Tasks")
                     st.write(result["tasks"])
 
