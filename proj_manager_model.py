@@ -1,4 +1,8 @@
-from Tasks import BaseChain, TaskParserChain, UserStoryExtractorChain, BacklogPrioritizerChain, SprintPlannerChain
+from Tasks import BaseChain
+from Tasks import TaskParserChain
+from Tasks import UserStoryExtractorChain
+from Tasks import BacklogPrioritizerChain
+from Tasks import SprintPlannerChain
 
 class ProjectManagerModel:
     def __init__(self):
