@@ -26,27 +26,15 @@ This project appears to be Python-based and utilizes `pip` for package managemen
    ```
 
 ## Usage
-
+**Clone the repo:**
+```bash
+git clone https://github.com/Goodnight77/agile_project_manager.git
+```
 **Running the application:**
+you just need to run the main.py file with streamlit
 
 ```bash
-python main.py
-```
-
-**Example Usage (Python):**
-
-```python
-# Import necessary modules
-from proj_manager_model import ProjectManager
-
-# Create a project manager instance
-manager = ProjectManager()
-
-# Example operations (modify to suit your specific needs)
-manager.create_project("My Project")
-manager.add_task("Task 1", "My Project")
-manager.assign_task("Task 1", "John Doe")
-# ...
+streamlit run main.py
 ```
 
 This is a general guide for running the application. You might need to adjust commands and code examples based on the specific structure and implementation of your project.
