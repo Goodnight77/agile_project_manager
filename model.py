@@ -30,6 +30,6 @@ class ChatGroqClient:
             raise ValueError("ChatGroq client has not been created yet.")
 
 # Example usage:
-client = ChatGroqClient(api_key="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")
+client = ChatGroqClient(api_key="your api key")
 client.create_client()
 llm = client.get_llm()
