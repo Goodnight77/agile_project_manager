@@ -13,7 +13,7 @@ class BaseChain:
         self.llm = ChatGroq(
     temperature=0,
     model= "llama-3.1-70b-versatile", #"llama3-70b-8192",
-    api_key="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",
+    api_key=" your api key ",
     verbose= True,
     max_retries=2,
 )
